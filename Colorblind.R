@@ -49,6 +49,9 @@ p + geom_point(size=2) +
         plot.background=element_rect(fill="gray80"),
         panel.background=element_rect(fill="gray80"),
         panel.grid.major=element_blank(),
-        panel.grid.minor=element_blank()) + 
-  labs(caption="")
+        panel.grid.minor=element_blank(),
+        legend.background=element_rect(fill="transparent"),
+        legend.box.background=element_rect(fill="transparent"),
+        legend.key=element_rect(fill="transparent", colour="transparent")) + 
+  labs(caption="\uA9 Parker Analytics 2019") +
   ggsave("colorblind_burst.pdf", width=6, height=6)
