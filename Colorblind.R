@@ -22,8 +22,8 @@ colorblind <- c(pa_blue,
                 pa_black,
                 pa_white)
 
-x <- rnorm(900,0,1)
-y <- rnorm(900,0,1)
+x <- rnorm(900,0,2)
+y <- rnorm(900,0,2)
 z <- rep(1:9,100)
 df <- data.frame(x=x,y=y,z=z)
 df$z <- factor(df$z, labels=c("#0072B2",
@@ -47,5 +47,8 @@ p + geom_point(size=2) +
         axis.title=element_blank(),
         axis.ticks=element_blank(),
         plot.background=element_rect(fill="gray80"),
-        panel.background=element_rect(fill="gray80")) + 
+        panel.background=element_rect(fill="gray80"),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank()) + 
+  labs(caption="")
   ggsave("colorblind_burst.pdf", width=6, height=6)
