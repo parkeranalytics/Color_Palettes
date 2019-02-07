@@ -1,3 +1,4 @@
+source("colorblind.R")
 x <- rnorm(900,0,2)
 y <- rnorm(900,0,2)
 z <- rep(1:9,100)
